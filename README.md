@@ -6,7 +6,7 @@ Airport backend project written in JS and tested with Jasmine
 ## Specifications:
 <!-- * A plane currently in the airport can be requested to take off. -->
 <!-- * No more planes can be added to the airport, if it's full. -->
-* It is up to you how many planes can land in the airport and how that is impermented.
+* It is up to you how many planes can land in the airport and how that is implemented.
 <!-- * If the airport is full then no planes can land -->
 * Include a weather condition using a module.
 * The weather must be random and only have two states "sunny" or "stormy".

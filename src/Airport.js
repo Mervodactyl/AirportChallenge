@@ -21,3 +21,11 @@ Airport.prototype.numberOfPlanesCalledToLand = function(numberOfPlanes) {
     this.dockingSpaceAvailabilty -= 1;
   }
 };
+
+Airport.prototype.grandFinaleTakeOff = function() {
+  if (this.dockingSpaceAvailabilty === this.MINIMUM_DOCKING_SPACES_AVAILABLE) {
+    this.dockingSpaceAvailabilty = this.MAXIMUM_DOCKING_SPACES_AVAILABLE;
+  } else {
+    this.dockingSpaceAvailabilty = this.dockingSpaceAvailabilty;
+  }
+};

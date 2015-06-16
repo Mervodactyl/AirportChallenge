@@ -16,12 +16,21 @@ describe("Airport", function() {
     });
   });
 
-  describe("brings in to Land", function() {
+  describe("brings in to Land ", function() {
     it("only ONE Plane to Dock at a time", function() {
       airport.numberOfPlanesCalledToLand(1);
       expect(airport.dockingSpaceAvailabilty).toEqual(9);
       airport.numberOfPlanesCalledToLand(2);
       expect(airport.dockingSpaceAvailabilty).toEqual(9);
+    });
+  });
+
+  describe("Grand Finale ", function() {
+    it("once at MAXIMUM CAPACITY, Airport can allow all planes to take off simultaneously", function() {
+      airport.dockPlane(10);
+      expect(airport.dockingSpaceAvailabilty).toEqual(0);
+      airport.grandFinaleTakeOff();
+      expect(airport.dockingSpaceAvailabilty).toEqual(10);
     });
   });
 
