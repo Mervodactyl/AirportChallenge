@@ -17,17 +17,13 @@ describe("Airport", function() {
   });
 
   describe("brings in to Land", function() {
-    xit("only ONE Plane to Dock at a time", function() {
+    it("only ONE Plane to Dock at a time", function() {
+      airport.numberOfPlanesCalledToLand(1);
+      expect(airport.dockingSpaceAvailabilty).toEqual(9);
       airport.numberOfPlanesCalledToLand(2);
-      expect(airport.dockingSpaceAvailabilty).toEqual(10);
+      expect(airport.dockingSpaceAvailabilty).toEqual(9);
     });
   });
-
-  // it("has a maximum temperature of 25 degrees (due to PSM)", function() {
-  //     thermo.increaseTemperature(6);
-  //     expect(thermo.currentTemperature).toEqual(25);
-  //   });
-
 
 
 

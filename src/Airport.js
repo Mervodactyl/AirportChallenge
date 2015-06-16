@@ -11,12 +11,13 @@ Airport.prototype.dockPlane = function(numberOfPlanes) {
     this.dockingSpaceAvailabilty -= numberOfPlanes;
   }
 };
-//
-// Airport.prototype.numberOfPlanesCalledToLand = function(numberOfPlanes) {
-//   if (numberOfPlanes <= 1) {
-//     this.dockingSpaceAvailabilty -= 1;
-//   } else {
-//     this.dockingSpaceAvailabilty = this.dockingSpaceAvailabilty;
-//   }
-// };
-//
+
+Airport.prototype.numberOfPlanesCalledToLand = function(numberOfPlanes) {
+  if (numberOfPlanes > 1) {
+    this.dockingSpaceAvailabilty = this.dockingSpaceAvailabilty;
+  } else if (numberOfPlanes < 1) {
+    this.dockingSpaceAvailabilty = this.dockingSpaceAvailabilty;
+  } else {
+    this.dockingSpaceAvailabilty -= 1;
+  }
+};
