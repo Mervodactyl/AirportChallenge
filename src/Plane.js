@@ -1,11 +1,11 @@
 var Plane = function() {
-  this.flyingStatus = false;
+  this.flyingStatus = true;
 };
 
 Plane.prototype.toggleFlyingStatus = function() {
-  if (this.flyingStatus === false) {
-    this.flyingStatus = true;
-  } else {
+  if (this.flyingStatus === true) {
     this.flyingStatus = false;
+  } else {
+    this.flyingStatus = true;
   }
 };
