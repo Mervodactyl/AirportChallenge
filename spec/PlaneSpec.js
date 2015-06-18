@@ -23,6 +23,13 @@ describe("Plane", function() {
     });
   });
 
+  describe("cannot, and will raise an ERROR when it is made to ", function() {
+    it("try and change its status to FLYING if it already is", function() {
+      expect(function() { plane.takeOff(); }).toThrow(new Error("You can not Take Off, you are already flying!"));
+    });
+
+  });
+
 
 
 

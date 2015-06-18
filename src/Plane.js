@@ -11,5 +11,8 @@ Plane.prototype.land = function() {
 };
 
 Plane.prototype.takeOff = function() {
+  if (this.isFlying()) {
+    throw new Error ("You can not Take Off, you are already flying!");
+  }
   this.flying = true;
 };
