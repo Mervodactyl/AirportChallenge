@@ -1,19 +1,11 @@
 var Plane = function() {
-  this.isFlying = true;
+  this.flying = true;
+};
+
+Plane.prototype.isFlying = function() {
+  return this.flying;
 };
 
 Plane.prototype.land = function() {
-  if (this.isFlying === true) {
-    this.isFlying = false;
-  } else {
-    this.isFlying = true;
-  }
-};
-
-Plane.prototype.takeOff = function() {
-  if (this.isFlying === false) {
-    this.isFlying = true;
-  } else {
-    this.isFlying = false
-  }
+  this.flying = false;
 };
