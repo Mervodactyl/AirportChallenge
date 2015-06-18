@@ -19,7 +19,3 @@ Plane.prototype.takeOff = function() {
   }
   this.flying = true;
 };
-
-
-
-// You can not Land, you are already Docked!
