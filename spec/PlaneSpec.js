@@ -1,14 +1,29 @@
 describe("Plane", function() {
 
-  it("by default, is FLYING when created", function() {
-    var plane = new Plane();
-    expect(plane.isFlying()).toBe(true);
+    beforeEach(function() {
+      plane = new Plane();
+    });
+
+  describe("by default, ", function() {
+    it("is FLYING when created", function() {
+      expect(plane.isFlying()).toBe(true);
+    });
   });
 
-  it("can change its status from FLYING to DOCKED", function() {
-    var plane = new Plane();
-    plane.land();
-    expect(plane.isFlying()).toBe(false);
+  describe("can change its status ", function() {
+    it("from FLYING to DOCKED", function() {
+      plane.land();
+      expect(plane.isFlying()).toBe(false);
+    });
+
+    it("or from DOCKED to FLYING", function() {
+      plane.land();
+      plane.takeOff();
+      expect(plane.isFlying()).toBe(true);
+    });
   });
+
+
+
 
 });
