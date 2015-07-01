@@ -1,8 +1,9 @@
 var Airport = function() {
-  this.planes = [];
+  this.dockedPlanes = [];
+  this.MAXIMUM_CAPACITY = 10;
 };
 
-Airport.prototype.park = function(plane) {
+Airport.prototype.dock = function(plane) {
   plane.land();
-  this.planes.push(plane);
+  this.dockedPlanes.push(plane);
 };

@@ -8,14 +8,14 @@ Plane.prototype.isFlying = function() {
 
 Plane.prototype.land = function() {
   if (this.isFlying() === false) {
-    throw new Error("You can not Land, you are already Docked!");
+    throw new Error("You can not Land, you are already on the ground!");
   }
   this.flying = false;
 };
 
 Plane.prototype.takeOff = function() {
   if (this.isFlying()) {
-    throw new Error("You can not Take Off, you are already Flying!");
+    throw new Error("You can not Take Off, you are already in the air!");
   }
   this.flying = true;
 };
